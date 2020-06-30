@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'backend',
     'webpack_loader',
-    'graphene_django'
+    'graphene_django',
+    'solo'
 ]
 
 MIDDLEWARE = [
@@ -132,4 +133,8 @@ WEBPACK_LOADER = {
         'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
         'STATS_FILE': os.path.join(FRONTEND_DIR, 'webpack-stats.json'),
     }
+}
+
+GRAPHENE = {
+    'SCHEMA': 'recipe_moderniser.schema.schema'
 }

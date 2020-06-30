@@ -1,0 +1,32 @@
+schema {
+  query: Query
+}
+
+type BaseVolumeType {
+  id: ID!
+  name: String!
+}
+
+type BaseWeightType {
+  id: ID!
+  name: String!
+}
+
+type Query {
+  allWeightUnits: [WeightType]
+  allVolumeUnits: [VolumeType]
+  baseWeightUnit: BaseWeightType
+  baseVolumeUnit: BaseVolumeType
+}
+
+type VolumeType {
+  id: ID!
+  name: String!
+  factor: Float!
+}
+
+type WeightType {
+  id: ID!
+  name: String!
+  factor: Float!
+}
