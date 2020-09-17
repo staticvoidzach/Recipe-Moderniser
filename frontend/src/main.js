@@ -14,7 +14,7 @@ new Vue({
         request: (operation) => {
             operation.setContext({
                 headers: {
-                    "X-CSRFToken": Cookies.get('csrftoken')
+                    "X-CSRFToken": Cookies.get('csrftoken') // This does nothing - I gave up and removed authentication from the backend
                 }
             })
         }

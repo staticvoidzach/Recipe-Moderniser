@@ -21,7 +21,7 @@ from graphene_django.views import GraphQLView
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=settings.DEBUG))),
-    path("", TemplateView.as_view(template_name="application.html"), name="app")
+    path('admin/', admin.site.urls), # Admin panel to update units
+    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=settings.DEBUG))), # GQL API
+    path("", TemplateView.as_view(template_name="application.html"), name="app") # The frontend Vue app
 ]
